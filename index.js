@@ -3,17 +3,15 @@ var cluster = require('cluster'),
     async = require('async');
 
 var tags = [
-  '#direngezi',
-  '#SesVerTürkiyeBuÜlkeSahipsizDeğil',
   '#bubirsivildirenis',
   '#OyunaGelmeTürkiyem',
   '#sesverturkiye',
-  '#Tayipİstifa',
   '#HükümeteNot',
   'Her Yer Taksim Her Yer Direniş',
   '#direngeziparki',
   '#direnankara',
-  '#occupygezi'];
+  'Taksimde TacizVar',
+  'Panzerin Vatandaşı Ezme Anı'];
 
 for (var i in tags) {
   cp.fork('./scrapper.js', [tags[i]]);
