@@ -10,7 +10,6 @@ var tags = [
   'Her Yer Taksim Her Yer Direniş',
   '#direngeziparki',
   '#direnankara',
-  'Taksimde TacizVar',
   'Panzerin Vatandaşı Ezme Anı',
   '#direnbesiktas'];
 
