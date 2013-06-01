@@ -12,6 +12,7 @@ var tags = [
   '#HükümeteNot',
   'Her Yer Taksim Her Yer Direniş',
   '#direngeziparki',
+  '#direnankara',
   '#occupygezi'];
 
 for (var i in tags) {
