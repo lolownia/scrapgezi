@@ -1,7 +1,7 @@
 var r = require('request'),
     qs = require('querystring'),
     async = require('async'),
-    sinceId = 0;
+    since_id = 0;
 
 var ara = {};
 
@@ -28,7 +28,7 @@ ara.persist = function(db, q, callback) {
       callback(err, false);
       return;
     }
-    since_id = body.max_id;
+    since_id = body.max_id || 0;
     var results = body.results || [];
     var tweets = db.use('direngezi');
     var inserts = [];
