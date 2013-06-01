@@ -33,17 +33,14 @@ ara.persist = function(db, q, callback) {
     var tweets = db.use('direngezi');
     var inserts = [];
     for (var i in results) {
-      inserts.push((function(item) {
-        return function(done){
-          item.tag = q;
-          item.createdAt = new Date();
-          ara.insert(tweets, item, done);
-        }
-      })(results[i]));
+      var item = results[i];
+      item._id = item.id_str;
+      item.tag = q;
+      item.createdAt = new Date();
+      inserts.push(item);
     }
+    tweets.bulk({ docs: inserts }, callback);
     console.log('inserting for ', q, results.length);
-    // persist
-    async.parallel(inserts, callback);
   });
 }
 
