@@ -17,6 +17,10 @@ ara.search = function(q, max, callback) {
   }, callback);
 };
 
+ara.insert = function(db, tweet, callback) {
+  db.insert(tweet, tweet.id_str, callback);
+}
+
 ara.persist = function(db, q, callback) {
   ara.search(q, 100, function(err, res, body) {
     if (err || !body) {
@@ -27,16 +31,19 @@ ara.persist = function(db, q, callback) {
     since_id = body.max_id;
     var results = body.results || [];
     var tweets = db.use('direngezi');
-    var docs = [];
+    var inserts = [];
     for (var i in results) {
-      var item = results[i];
-      docs.push({
-        "_id": item.id_str,
-        "doc": item
-      });
+      inserts.push((function(item) {
+        return function(done){
+          item.tag = q;
+          item.createdAt = new Date();
+          ara.insert(tweets, item, done);
+        }
+      })(results[i]));
     }
-    tweets.bulk(docs,callback);
-    console.log('inserting for ', q, docs.length);
+    console.log('inserting for ', q, results.length);
+    // persist
+    async.parallel(inserts, callback);
   });
 }
 
