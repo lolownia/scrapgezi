@@ -4,7 +4,7 @@ var cluster = require('cluster'),
 
 var tags = [
   '#direngezi',
-  '#occupygezi',
+  '#SesVerTürkiyeBuÜlkeSahipsizDeğil',
   '#bubirsivildirenis',
   '#OyunaGelmeTürkiyem',
   '#sesverturkiye',
