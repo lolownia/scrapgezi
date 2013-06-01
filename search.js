@@ -39,8 +39,13 @@ ara.persist = function(db, q, callback) {
       item.createdAt = new Date();
       inserts.push(item);
     }
-    tweets.bulk({ docs: inserts }, callback);
-    console.log('inserting for ', q, results.length);
+    console.log('inserting for ', q, inserts.length);
+    if (inserts.length > 0 ) {
+      tweets.bulk({ docs: inserts }, callback);
+    } else {
+      callback && callback();
+    }
+    
   });
 }
 
