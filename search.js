@@ -10,7 +10,8 @@ ara.search = function(q, max, callback) {
   // todo: since id
   uri += qs.stringify({
     q: q,
-    rpp: max
+    rpp: max,
+    include_entities: true
   });
   r({
     uri: uri, json: true
