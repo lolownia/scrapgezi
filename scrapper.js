@@ -5,7 +5,7 @@ var search = require('./search.js'),
 
 var fn = function() {
   search.persist(db, tag, function(err, result) {
-    setTimeout(fn, 1000);
+    setTimeout(fn, 5000);
   });
 };
 
