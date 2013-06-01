@@ -7,11 +7,15 @@ var tags = [
   '#OyunaGelmeTürkiyem',
   '#sesverturkiye',
   '#HükümeteNot',
-  'Her Yer Taksim Her Yer Direniş',
+  'YeterArtık Hükümetİstifa',
   '#direngeziparki',
   '#direnankara',
   'Panzerin Vatandaşı Ezme Anı',
-  '#direnbesiktas'];
+  '#direnbesiktas',
+  '#occupygezi',
+  '#ŞiddetiDurdurun',
+  '#Tayipİstifa'
+  ];
 
 for (var i in tags) {
   cp.fork('./scrapper.js', [tags[i]]);
