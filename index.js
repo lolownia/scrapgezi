@@ -11,7 +11,8 @@ var tags = [
   '#direngeziparki',
   '#direnankara',
   'Taksimde TacizVar',
-  'Panzerin Vatandaşı Ezme Anı'];
+  'Panzerin Vatandaşı Ezme Anı',
+  '#direnbesiktas'];
 
 for (var i in tags) {
   cp.fork('./scrapper.js', [tags[i]]);
