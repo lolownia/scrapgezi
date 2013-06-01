@@ -1,0 +1,16 @@
+{
+  "name": "scrapgezi",
+  "version": "0.1.0",
+  "author": "Burcu Dogan <burcujdogan@gmail.com>",
+  "description": "a simple zero-configuration command-line http server",
+  "dependencies" : {
+    "request"   :  "*",
+    "nano": "*",
+    "async": "*",
+    "logger": "*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
