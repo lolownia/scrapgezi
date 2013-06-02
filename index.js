@@ -4,18 +4,16 @@ var cluster = require('cluster'),
 
 var tags = [
   '#bubirsivildirenis',
-  '#OyunaGelmeTürkiyem',
   '#sesverturkiye',
-  '#HükümeteNot',
-  'YeterArtık Hükümetİstifa',
   '#direngeziparki',
   '#direnankara',
-  'Panzerin Vatandaşı Ezme Anı',
   '#direnbesiktas',
+  '#direnizmir',
   '#occupygezi',
   '#ŞiddetiDurdurun',
   '#Tayipİstifa',
-  '#DictatorErdogan'
+  '#DictatorErdogan',
+  '#opTurkey'
   ];
 
 for (var i in tags) {
