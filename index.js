@@ -14,7 +14,8 @@ var tags = [
   '#direnbesiktas',
   '#occupygezi',
   '#ŞiddetiDurdurun',
-  '#Tayipİstifa'
+  '#Tayipİstifa',
+  '#DictatorErdogan'
   ];
 
 for (var i in tags) {
