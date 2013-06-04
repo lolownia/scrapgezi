@@ -1,3 +1,4 @@
 {
-  "db": "https://username:xxx@hostname"
+  "dburl": "https://username:xxx@hostname",
+  "dbname": "direngezi"
 }

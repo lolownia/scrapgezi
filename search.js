@@ -1,6 +1,7 @@
 var r = require('request'),
     qs = require('querystring'),
     async = require('async'),
+    settings = require('./settings.json')
     since_id = 0;
 
 var ara = {};
@@ -31,7 +32,7 @@ ara.persist = function(db, q, callback) {
     }
     since_id = body.max_id || 0;
     var results = body.results || [];
-    var tweets = db.use('direngezi');
+    var tweets = db.use(settings.dbname);
     var inserts = [];
     for (var i in results) {
       var item = results[i];

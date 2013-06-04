@@ -1,6 +1,6 @@
 var search = require('./search.js'),
     settings = require('./settings.json'),
-    db = require('nano')(settings.db),
+    db = require('nano')(settings.dburl),
     tag = process.argv[2];
 
 var fn = function() {
