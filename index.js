@@ -3,7 +3,6 @@ var cluster = require('cluster'),
     async = require('async');
 
 var tags = [
-  '#bubirsivildirenis',
   '#sesverturkiye',
   '#direngeziparki',
   '#direnankara',
@@ -13,7 +12,8 @@ var tags = [
   '#ŞiddetiDurdurun',
   '#Tayipİstifa',
   '#DictatorErdogan',
-  '#opTurkey'
+  '#opTurkey',
+  '#EylemVakti'
   ];
 
 for (var i in tags) {
