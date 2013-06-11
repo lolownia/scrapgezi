@@ -1,4 +1,8 @@
 {
-  "dburl": "https://username:xxx@hostname",
-  "dbname": "direngezi"
+  "dburl": "https://uuu:xxx@movonw.cloudant.com",
+  "dbname": "gezi",
+  "opencalaisurl": "http://api.opencalais.com/tag/rs/enrich",
+  "opencalaiskey": "",
+  "yandexkey": ""
 }
+
